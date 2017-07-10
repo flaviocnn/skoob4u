@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row" style="height:10vh">
+  </div>
+  <div class="row center" style="height:20vh">
+    <h1 class="thin shadowed">Bentornato su Skoob</h1>
+    <h5 class="condensed light">Accedi per visualizzare le tue trattative</h5>
+  </div>
+  <div class="row center" style="min-height:40vh; margin-bottom:0px;">
+    <div class="card white col s6 offset-s3 text-cyan" style="padding:30px">
+      <form class="col s12 m8 offset-m2 l6 offset-l3" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email1" type="email" class="validate"
+              [(ngModel)]="model.email" name="email" #email="ngModel" required
+              pattern="[^ @]*@[^ @]*" />
+              <label for="email1" data-error="Email non valida">Email</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <label for="password1">Password</label>
+              <input id="password1" type="password" class="validate"
+              [(ngModel)]="model.password" name="password1" #password1="ngModel" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <button class="btn cyan lighten-1 waves-effect waves-light col s12"
+            [disabled]="!loginForm.form.valid"
+            type="submit" name="action">Submit<i class="material-icons right">send</i>
+            </button>
+          </div>
+
+        </form>
+    </div>
+  </div>
+</div>

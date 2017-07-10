@@ -1,0 +1,18 @@
+<nav class="white" role="navigation">
+  <div class="nav-wrapper container">
+    <ul class="left hide-on-med-and-down">
+      <li><a routerLink="/home" routerLinkActive="active" id="logo-container" href="#" class="brand-logo cyan-text text-lighten-1">Skoob</a></li>
+    </ul>
+    <ul class="right hide-on-med-and-down">
+      <li *ngIf="currentUser==null"><a class=" btn-flat cyan-text text-lighten-1 waves-effect waves-light waves-yellow" routerLink="/signup" routerLinkActive="active">registrati </a></li>
+      <li *ngIf="currentUser==null"><a class="waves-effect waves-teal waves-red btn-flat" routerLink="/login" routerLinkActive="active">accedi</a></li>
+      <li *ngIf="currentUser!=null"><a class="waves-effect waves-teal waves-red btn-flat" (click)="quit()" routerLinkActive="active">logout</a></li>
+      <li *ngIf="currentUser!=null"><a class="waves-effect waves-teal waves-red btn-flat" routerLink="/dashboard" routerLinkActive="active">dashboard</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav cyan">
+      <li><a class="waves-effect waves-light btn">Button <i class="material-icons right">cloud</i></a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>

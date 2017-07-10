@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row" style="height:10vh">
+  </div>
+  <div class="row center">
+    <div class="card white col s10 offset-s1" id="cardWrapper">
+      <div class="row" id="row1">
+        <div class="col s12 m6" id="bookImg"><img id="img" *ngIf="book!=null" src="{{book.img_url}}"></div>
+        <div class="col s12 m6" id="infoCol">
+          <div class="row" style="height: 50%;margin-bottom: 50px;padding-top: 20px;">
+            <h5 *ngIf="book!=null">
+              {{book.book_title}}
+            </h5>
+            <h5 *ngIf="book!=null">ISBN: {{book.isbn}}</h5>
+          </div>
+          <div class="row" style="height: 50%;">
+            <div class="col s12 m4"><a (click)="buy()" class="cyan waves-effect waves-light btn-large" style="
+    margin: 10px;
+">ACQUISTALO</a></div>
+            <div class="col s12 m4 offset-m3"><a style="
+    margin: 10px;
+" (click)="sell()" class="cyan waves-effect waves-light btn-large">VENDILO</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal1" class="modal modal-fixed-footer" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+  <div class="modal-content">
+    <h4>Complimenti {{currentUser.email}}!</h4>
+    <h5 *ngIf="dealer">{{dealer}} è registrato per questo libro </h5>
+    <p>potrai concludere la trattativa immediatamente</p>
+    <p>ti verrà inviata una email a breve con l'indirizzo dell'utente da contattare</p>
+  </div>
+  <div class="modal-footer">
+    <a class="waves-effect waves-green btn-flat" (click)="closeModal()">Chiudi</a>
+    <a class="modal-action modal-close waves-effect waves-green btn-flat" routerLink="/home" routerLinkActive="active">Home</a>
+  </div>
+</div>

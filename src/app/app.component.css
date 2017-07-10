@@ -1,0 +1,21 @@
+h1,h5{
+color: white;
+}
+.shadowed{
+  text-shadow:  0px 0px 20px rgba(0, 0, 0, 0.24);
+}
+.circle {
+  width: 500px;
+  height: 34vh;
+  border-radius: 50%;
+  font-size: 50px;
+  color: #fff;
+  line-height: 500px;
+  text-align: center;
+  border: 2px solid white;
+}
+.container {
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 100% !important;
+    width: 98%}

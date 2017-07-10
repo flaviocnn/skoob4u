@@ -1,0 +1,26 @@
+#book {
+  height: 350px;
+  width: 220px;
+  overflow: hidden;
+}
+
+#bookImg {
+  height: 180px;
+}
+
+#bookTitle {
+  height: 100px;
+  padding: 0px !important;
+}
+
+#bookTitle span {
+  font-size: medium !important;
+}
+
+.container {
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 100% !important;
+  width: 98%;
+  min-height: 70vh;
+}

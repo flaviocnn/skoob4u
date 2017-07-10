@@ -1,0 +1,21 @@
+h1,h5{
+  color:white;
+}
+h3{
+  color: #26c6da;
+}
+#row1{
+height:10vh;
+}
+#row2{
+height:20vh;
+}
+#row3{
+min-height:600px;
+}
+.card{
+  padding:30px;
+}
+#cerca{
+margin-top: 26px;
+}

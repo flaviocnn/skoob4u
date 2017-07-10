@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row" id="row1" style="height:10vh">
+  </div>
+  <div class="row center" id="row2">
+    <h1 class="thin shadowed">Skoob</h1>
+    <h5 class="condensed light">Acquista e vendi i tuoi libri usati</h5>
+  </div>
+  <div class="row center" id="row3">
+    <div class="card white col s12 m6 offset-m3">
+      <h3 class="condensed light">Cerca il tuo libro</h3>
+      <div class="input-field col s9">
+        <input placeholder="Titolo/ISBN..." #searchBox id="search-box"
+               (keyup)="search(searchBox.value)">
+        <div *ngIf="books| async" class="collection">
+          <a *ngFor="let book of books| async | slice:1:4" class="collection-item"
+           (click)="$event.preventDefault();gotoDetail(book)" href="#">{{book.book_title}}
+          </a>
+        </div>
+      </div>
+      <button class=" col s3 btn cyan lighten-1 waves-effect waves-light" routerLink="/books"
+              routerLinkActive="active" type="submit" name="action" id="cerca">Cerca
+              <i class="material-icons right">search</i>
+      </button>
+    </div>
+  </div>
+</div>
+
+
